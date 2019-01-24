@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://App/Scripts/SearchScene.cs" type="Script" id=1]
+[ext_resource path="res://Data/UI/Menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Data/UI/Search.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Data/UI/Message.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Fonts/Ubuntu/Ubuntu-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Fonts/Ubuntu/Ubuntu-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Fonts/Ubuntu/Ubuntu-BoldItalic.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 16
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 16
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font" ]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 14
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 14
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 14
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="SearchScene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Menu" parent="." instance=ExtResource( 2 )]
+
+[node name="Search" parent="." instance=ExtResource( 3 )]
+margin_left = 12.0
+margin_top = 49.0
+margin_right = 52.0
+margin_bottom = 89.0
+
+[node name="CardContainer" type="Node2D" parent="."]
+
+[node name="MessageBox" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Description" type="RichTextLabel" parent="."]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 140.0
+margin_right = 130.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[b]Description[/b]:"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Description:"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts", "custom_fonts/bold_font", "custom_fonts/bold_italics_font", "custom_fonts/normal_font" ]
+
+[node name="CardDescription" type="RichTextLabel" parent="."]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 13.0
+margin_top = 160.0
+margin_right = 392.0
+margin_bottom = 210.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/bold_italics_font = SubResource( 1 )
+custom_fonts/bold_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[b]Testing[/b] aye"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Testing aye"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_fonts", "custom_fonts/normal_font" ]
+
